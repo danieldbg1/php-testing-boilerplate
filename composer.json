@@ -14,12 +14,12 @@
     "prefer-stable": true,
     "autoload": {
         "psr-4": {
-            "Deg540\\CleanCodeKata9\\": "src/"
+            "Deg540\\PHPTestingBoilerplate\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Deg540\\CleanCodeKata9\\Test\\": "tests/"
+            "Deg540\\PHPTestingBoilerplate\\Test\\": "tests/"
         }
     },
     "config": {
