@@ -7,7 +7,7 @@ namespace Deg540\PHPTestingBoilerplate;
 class RomanNumber
 {
 
-    public function convertirNumerosRomanos(int $numeroDecimal){
+    public function cambiarDecimalARomano(int $numeroDecimal){
         if ($numeroDecimal == 1){
             return "I";
         }
@@ -45,11 +45,18 @@ class RomanNumber
             return 50;
         }
         if ($numeroDecimal < 500){
-            return C;
+            return 100;
         }
         if ($numeroDecimal < 1000){
-            return D;
+            return 500;
         }
+    }
+
+    public function convertirNumerosRomanos(int $numeroDecimal){
+
+        return $this->cambiarDecimalARomano($numeroDecimal);
+
+
     }
 
 

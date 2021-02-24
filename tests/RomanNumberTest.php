@@ -93,12 +93,20 @@ class RomanNumberTest extends TestCase{
     /**
      * @test
      */
-    public function devuelve_decimal_minimo_maxaximo(){
+    public function devuelve_decimal_minimo_maximo(){
         $romanNumber = new RomanNumber();
 
         $this->assertEquals(1, $romanNumber->buscarNumeroMinimoMaximo(3));
         $this->assertEquals(50, $romanNumber->buscarNumeroMinimoMaximo(88));
         $this->assertEquals(10, $romanNumber->buscarNumeroMinimoMaximo(12));
+    }
+
+    /**
+     * @test
+     */
+    public function devuelve(){
+        //comprobar si metiendo un numero, devuelve su descomposicion en romano, p.e.:
+        //meto 3, devuelve III, meto 18, devuelve XVIII.Sin comprobar los 4, 9, 90,...
     }
 
 
