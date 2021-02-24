@@ -23,6 +23,9 @@ class RomanNumber
         if ($numeroDecimal == 100){
             return "C";
         }
+        if ($numeroDecimal == 500){
+            return "D";
+        }
 
     }
 

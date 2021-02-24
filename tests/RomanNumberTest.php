@@ -54,7 +54,6 @@ class RomanNumberTest extends TestCase{
 
     }
 
-
     /**
      * @test
      */
@@ -66,6 +65,19 @@ class RomanNumberTest extends TestCase{
         $this->assertEquals("C", $resultado);
 
     }
+
+    /**
+     * @test
+     */
+    public function si_es_500_devuelve_D(){
+        $romanNumber = new RomanNumber();
+
+        $resultado = $romanNumber->convertirNumerosRomanos(500);
+
+        $this->assertEquals("D", $resultado);
+
+    }
+
 
 
 }
