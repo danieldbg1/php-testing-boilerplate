@@ -42,5 +42,17 @@ class RomanNumberTest extends TestCase{
 
     }
 
+    /**
+     * @test
+     */
+    public function si_es_50_devuelve_L(){
+        $romanNumber = new RomanNumber();
+
+        $resultado = $romanNumber->convertirNumerosRomanos(50);
+
+        $this->assertEquals("L", $resultado);
+
+    }
+
 
 }

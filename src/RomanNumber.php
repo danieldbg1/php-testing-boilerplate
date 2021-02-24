@@ -17,6 +17,9 @@ class RomanNumber
         if ($numeroDecimal == 10){
             return "X";
         }
+        if ($numeroDecimal == 50){
+            return "L";
+        }
 
     }
 
