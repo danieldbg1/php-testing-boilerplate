@@ -28,6 +28,17 @@ class RomanNumberTest extends TestCase{
         $resultado = $romanNumber->convertirNumerosRomanos(5);
 
         $this->assertEquals("V", $resultado);
+    }
+
+    /**
+     * @test
+     */
+    public function si_es_10_devuelve_X(){
+        $romanNumber = new RomanNumber();
+
+        $resultado = $romanNumber->convertirNumerosRomanos(10);
+
+        $this->assertEquals("X", $resultado);
 
     }
 
