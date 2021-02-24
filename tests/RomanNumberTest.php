@@ -55,4 +55,17 @@ class RomanNumberTest extends TestCase{
     }
 
 
+    /**
+     * @test
+     */
+    public function si_es_100_devuelve_C(){
+        $romanNumber = new RomanNumber();
+
+        $resultado = $romanNumber->convertirNumerosRomanos(100);
+
+        $this->assertEquals("C", $resultado);
+
+    }
+
+
 }

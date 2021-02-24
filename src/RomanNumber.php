@@ -20,6 +20,9 @@ class RomanNumber
         if ($numeroDecimal == 50){
             return "L";
         }
+        if ($numeroDecimal == 100){
+            return "C";
+        }
 
     }
 
