@@ -26,9 +26,31 @@ class RomanNumber
         if ($numeroDecimal == 500){
             return "D";
         }
-
+        if ($numeroDecimal == 1000){
+            return "M";
+        }
     }
 
+    public function buscarNumeroMinimoMaximo(int $numeroDecimal){
+        if ($numeroDecimal < 5){
+            return 1;
+        }
+        if ($numeroDecimal < 10){
+            return 5;
+        }
+        if ($numeroDecimal < 50){
+            return 10;
+        }
+        if ($numeroDecimal < 100){
+            return 50;
+        }
+        if ($numeroDecimal < 500){
+            return C;
+        }
+        if ($numeroDecimal < 1000){
+            return D;
+        }
+    }
 
 
 }

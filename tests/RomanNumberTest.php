@@ -78,6 +78,30 @@ class RomanNumberTest extends TestCase{
 
     }
 
+    /**
+     * @test
+     */
+    public function si_es_1000_devuelve_M(){
+        $romanNumber = new RomanNumber();
+
+        $resultado = $romanNumber->convertirNumerosRomanos(1000);
+
+        $this->assertEquals("M", $resultado);
+
+    }
+
+    /**
+     * @test
+     */
+    public function devuelve_decimal_minimo_maxaximo(){
+        $romanNumber = new RomanNumber();
+
+        $this->assertEquals(1, $romanNumber->buscarNumeroMinimoMaximo(3));
+        $this->assertEquals(50, $romanNumber->buscarNumeroMinimoMaximo(88));
+        $this->assertEquals(10, $romanNumber->buscarNumeroMinimoMaximo(12));
+    }
+
+
 
 
 }
