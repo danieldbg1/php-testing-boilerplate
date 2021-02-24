@@ -19,6 +19,17 @@ class RomanNumberTest extends TestCase{
 
     }
 
+    /**
+     * @test
+     */
+    public function si_es_5_devuelve_V(){
+        $romanNumber = new RomanNumber();
+
+        $resultado = $romanNumber->convertirNumerosRomanos(5);
+
+        $this->assertEquals("V", $resultado);
+
+    }
 
 
 }

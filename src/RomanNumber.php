@@ -11,6 +11,12 @@ class RomanNumber
         if ($numeroDecimal == 1){
             return "I";
         }
+
+        if ($numeroDecimal == 5){
+            return "V";
+        }
+
+
     }
 
 
