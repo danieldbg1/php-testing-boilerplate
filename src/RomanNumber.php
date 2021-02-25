@@ -50,13 +50,23 @@ class RomanNumber
         if ($numeroDecimal < 1000){
             return 500;
         }
+        if ($numeroDecimal >= 1000){
+            return 1000;
+        }
     }
 
     public function convertirNumerosRomanos(int $numeroDecimal){
+        $numeroRomano = "";
 
-        return $this->cambiarDecimalARomano($numeroDecimal);
+        while ($numeroDecimal > 0){
+            $aux = $this->buscarNumeroMinimoMaximo($numeroDecimal);
+            $numeroRomano.= $this->cambiarDecimalARomano($aux);
 
+            
+            $numeroDecimal-= $aux;
+        }
 
+        return $numeroRomano;
     }
 
 
