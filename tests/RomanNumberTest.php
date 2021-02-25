@@ -148,15 +148,15 @@ class RomanNumberTest extends TestCase{
      * @test
      */
     public function devuelve_numero_descompuesto_en_romano(){
-        $decimalnumber = new RomanNumber();
+        $decimalNumber = new RomanNumber();
 
-        $this->assertEquals("III", $decimalnumber->convertirNumerosRomanos(3));
-        $this->assertEquals("VIII", $decimalnumber->convertirNumerosRomanos(8));
-        $this->assertEquals("XVI", $decimalnumber->convertirNumerosRomanos(16));
+        $this->assertEquals("VIII", $decimalNumber->convertirNumerosRomanos(8));
+        $this->assertEquals("IV", $decimalNumber->convertirNumerosRomanos(4));
+        $this->assertEquals("XLIX", $decimalNumber->convertirNumerosRomanos(49));
+        $this->assertEquals("CXXXIX", $decimalNumber->convertirNumerosRomanos(139));
+        $this->assertEquals("LXXIV", $decimalNumber->convertirNumerosRomanos(74));
+        $this->assertEquals("XCIX", $decimalNumber->convertirNumerosRomanos(99));
 
-        $this->assertEquals("IV", $decimalnumber->convertirNumerosRomanos(4));
-        //$this->assertEquals("IX", $decimalnumber->convertirNumerosRomanos(16));
-        //$this->assertEquals("XIX", $decimalnumber->convertirNumerosRomanos(16));
     }
 
 
