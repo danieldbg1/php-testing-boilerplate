@@ -7,7 +7,7 @@ namespace Deg540\PHPTestingBoilerplate;
 class RomanNumber
 {
 
-    public function cambiarDecimalARomano(int $numeroDecimal){
+    private function cambiarDecimalARomano(int $numeroDecimal){
         if ($numeroDecimal == 1){
             return array("I", 1);
         }
