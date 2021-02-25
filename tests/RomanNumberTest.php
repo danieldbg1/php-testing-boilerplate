@@ -120,6 +120,15 @@ class RomanNumberTest extends TestCase{
     /**
      * @test
      */
+    public function si_es_90_devuelve_XC(){
+        $decimalNumber = new RomanNumber();
+
+        $this->assertEquals("XC", $decimalNumber->convertirNumerosRomanos(90));
+    }
+
+    /**
+     * @test
+     */
     public function devuelve_decimal_minimo_maximo(){
         $decimalNumber = new RomanNumber();
 
