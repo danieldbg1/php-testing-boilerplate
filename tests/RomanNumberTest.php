@@ -108,7 +108,14 @@ class RomanNumberTest extends TestCase{
         $this->assertEquals("IX", $decimalNumber->convertirNumerosRomanos(9));
     }
 
+    /**
+     * @test
+     */
+    public function si_es_40_devuelve_XL(){
+        $decimalNumber = new RomanNumber();
 
+        $this->assertEquals("XL", $decimalNumber->convertirNumerosRomanos(90));
+    }
 
     /**
      * @test
