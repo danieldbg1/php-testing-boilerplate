@@ -9,53 +9,55 @@ class RomanNumber
 
     public function cambiarDecimalARomano(int $numeroDecimal){
         if ($numeroDecimal == 1){
-            return "I";
+            return array("I", 1);
         }
         if ($numeroDecimal == 4){
-            return "IV";
+            return array("IV", 4);
         }
         if ($numeroDecimal == 5){
-            return "V";
+            return array("V", 5);
         }
         if ($numeroDecimal == 9){
-            return "IX";
+            return array("IX", 9);
         }
         if ($numeroDecimal == 10){
-            return "X";
+            return array("X", 10);
         }
         if ($numeroDecimal == 40){
-            return "XL";
+            return array("XL", 40);
         }
         if ($numeroDecimal == 50){
-            return "L";
+            return array("L", 50);
         }
         if ($numeroDecimal == 90){
-            return "XC";
+            return array("XC", 90);
         }
         if ($numeroDecimal == 100){
-            return "C";
+            return array("C", 100);
         }
         if ($numeroDecimal == 400){
-            return "CD";
+            return array("CD", 400);
         }
         if ($numeroDecimal == 500){
-            return "D";
+            return array("D", 500);
         }
         if ($numeroDecimal == 900){
-            return "CM";
+            return array("CM", 900);
         }
         if ($numeroDecimal == 1000){
-            return "M";
+            return array("M", 1000);
         }
     }
 
     public function convertirNumerosRomanos(int $numeroDecimal){
-        $numeroRomano = "";
-        $numeroMinMax = $this->buscarNumeroMinimoMaximo($numeroDecimal);
-        $numeroRomano.=$this->cambiarDecimalARomano($numeroMinMax);
+        $numeroRomanoResultado = "";
+        while ($numeroDecimal > 0){
+            $resultadoLlamada = $this->cambiarDecimalARomano($numeroDecimal);
+            $numeroRomanoResultado.=$resultadoLlamada[0];
+            $numeroDecimal-=$resultadoLlamada[1];
+        }
 
-
-        return $numeroRomano;
+        return $numeroRomanoResultado;
     }
 
 
