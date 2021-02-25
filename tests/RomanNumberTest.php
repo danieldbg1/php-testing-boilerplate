@@ -129,6 +129,15 @@ class RomanNumberTest extends TestCase{
     /**
      * @test
      */
+    public function si_es_400_devuelve_CD(){
+        $decimalNumber = new RomanNumber();
+
+        $this->assertEquals("CD", $decimalNumber->convertirNumerosRomanos(400));
+    }
+
+    /**
+     * @test
+     */
     public function devuelve_decimal_minimo_maximo(){
         $decimalNumber = new RomanNumber();
 
