@@ -131,9 +131,17 @@ class RomanNumberTest extends TestCase{
      */
     public function si_es_400_devuelve_CD(){
         $decimalNumber = new RomanNumber();
-        
 
         $this->assertEquals("CD", $decimalNumber->convertirNumerosRomanos(400));
+    }
+
+    /**
+     * @test
+     */
+    public function si_es_900_devuelve_CM(){
+        $decimalNumber = new RomanNumber();
+
+        $this->assertEquals("CM", $decimalNumber->convertirNumerosRomanos(900));
     }
 
     /**
