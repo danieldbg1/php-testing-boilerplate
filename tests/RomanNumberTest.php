@@ -10,138 +10,23 @@ class RomanNumberTest extends TestCase{
     /**
      * @test
      */
-    public function si_es_1_devuelve_I(){
+    public function casos_base(){
         $decimalNumber = new RomanNumber();
 
-        $romanNumber = $decimalNumber->convertirNumerosRomanos(1);
-
-        $this->assertEquals("I", $romanNumber);
-
-    }
-
-    /**
-     * @test
-     */
-    public function si_es_5_devuelve_V(){
-        $decimalNumber = new RomanNumber();
-
-        $romanNumber = $decimalNumber->convertirNumerosRomanos(5);
-
-        $this->assertEquals("V", $romanNumber);
-    }
-
-    /**
-     * @test
-     */
-    public function si_es_10_devuelve_X(){
-        $decimalNumber = new RomanNumber();
-
-        $romanNumber = $decimalNumber->convertirNumerosRomanos(10);
-
-        $this->assertEquals("X", $romanNumber);
-
-    }
-
-    /**
-     * @test
-     */
-    public function si_es_50_devuelve_L(){
-        $decimalNumber = new RomanNumber();
-
-        $resultado = $decimalNumber->convertirNumerosRomanos(50);
-
-        $this->assertEquals("L", $resultado);
-
-    }
-
-    /**
-     * @test
-     */
-    public function si_es_100_devuelve_C(){
-        $decimalNumber = new RomanNumber();
-
-        $romanNumber = $decimalNumber->convertirNumerosRomanos(100);
-
-        $this->assertEquals("C", $romanNumber);
-
-    }
-
-    /**
-     * @test
-     */
-    public function si_es_500_devuelve_D(){
-        $decimalNumber = new RomanNumber();
-
-        $romanNumber = $decimalNumber->convertirNumerosRomanos(500);
-
-        $this->assertEquals("D", $romanNumber);
-
-    }
-
-    /**
-     * @test
-     */
-    public function si_es_1000_devuelve_M(){
-        $decimalNumber = new RomanNumber();
-
-        $romanNumber = $decimalNumber->convertirNumerosRomanos(1000);
-
-        $this->assertEquals("M", $romanNumber);
-
-    }
-
-    /**
-     * @test
-     */
-    public function si_es_4_devuelve_IV(){
-        $decimalNumber = new RomanNumber();
-
+        $this->assertEquals("I", $decimalNumber->convertirNumerosRomanos(1));
         $this->assertEquals("IV", $decimalNumber->convertirNumerosRomanos(4));
-    }
-
-    /**
-     * @test
-     */
-    public function si_es_9_devuelve_IX(){
-        $decimalNumber = new RomanNumber();
-
+        $this->assertEquals("V", $decimalNumber->convertirNumerosRomanos(5));
         $this->assertEquals("IX", $decimalNumber->convertirNumerosRomanos(9));
-    }
-
-    /**
-     * @test
-     */
-    public function si_es_40_devuelve_XL(){
-        $decimalNumber = new RomanNumber();
-
-        $this->assertEquals("XL", $decimalNumber->convertirNumerosRomanos(90));
-    }
-
-    /**
-     * @test
-     */
-    public function si_es_90_devuelve_XC(){
-        $decimalNumber = new RomanNumber();
-
+        $this->assertEquals("X", $decimalNumber->convertirNumerosRomanos(10));
+        $this->assertEquals("XL", $decimalNumber->convertirNumerosRomanos(40));
+        $this->assertEquals("L", $decimalNumber->convertirNumerosRomanos(50));
         $this->assertEquals("XC", $decimalNumber->convertirNumerosRomanos(90));
-    }
-
-    /**
-     * @test
-     */
-    public function si_es_400_devuelve_CD(){
-        $decimalNumber = new RomanNumber();
-
+        $this->assertEquals("C", $decimalNumber->convertirNumerosRomanos(100));
         $this->assertEquals("CD", $decimalNumber->convertirNumerosRomanos(400));
-    }
-
-    /**
-     * @test
-     */
-    public function si_es_900_devuelve_CM(){
-        $decimalNumber = new RomanNumber();
-
+        $this->assertEquals("D", $decimalNumber->convertirNumerosRomanos(500));
         $this->assertEquals("CM", $decimalNumber->convertirNumerosRomanos(900));
+        $this->assertEquals("M", $decimalNumber->convertirNumerosRomanos(1000));
+
     }
 
     /**
@@ -158,8 +43,5 @@ class RomanNumberTest extends TestCase{
         $this->assertEquals("XCIX", $decimalNumber->convertirNumerosRomanos(99));
 
     }
-
-
-
 
 }
