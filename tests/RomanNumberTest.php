@@ -93,6 +93,17 @@ class RomanNumberTest extends TestCase{
     /**
      * @test
      */
+    public function si_es_4_devuelve_IV(){
+        $decimalNumber = new RomanNumber();
+
+        $this->assertEquals("IV", $decimalNumber->convertirNumerosRomanos(4));
+    }
+
+
+
+    /**
+     * @test
+     */
     public function devuelve_decimal_minimo_maximo(){
         $decimalNumber = new RomanNumber();
 
@@ -111,6 +122,9 @@ class RomanNumberTest extends TestCase{
         $this->assertEquals("VIII", $decimalnumber->convertirNumerosRomanos(8));
         $this->assertEquals("XVI", $decimalnumber->convertirNumerosRomanos(16));
 
+        $this->assertEquals("IV", $decimalnumber->convertirNumerosRomanos(4));
+        //$this->assertEquals("IX", $decimalnumber->convertirNumerosRomanos(16));
+        //$this->assertEquals("XIX", $decimalnumber->convertirNumerosRomanos(16));
     }
 
 
