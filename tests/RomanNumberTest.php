@@ -147,17 +147,6 @@ class RomanNumberTest extends TestCase{
     /**
      * @test
      */
-    public function devuelve_decimal_minimo_maximo(){
-        $decimalNumber = new RomanNumber();
-
-        $this->assertEquals(1, $decimalNumber->buscarNumeroMinimoMaximo(3));
-        $this->assertEquals(50, $decimalNumber->buscarNumeroMinimoMaximo(88));
-        $this->assertEquals(10, $decimalNumber->buscarNumeroMinimoMaximo(12));
-    }
-
-    /**
-     * @test
-     */
     public function devuelve_numero_descompuesto_en_romano(){
         $decimalnumber = new RomanNumber();
 
