@@ -99,6 +99,15 @@ class RomanNumberTest extends TestCase{
         $this->assertEquals("IV", $decimalNumber->convertirNumerosRomanos(4));
     }
 
+    /**
+     * @test
+     */
+    public function si_es_9_devuelve_IX(){
+        $decimalNumber = new RomanNumber();
+
+        $this->assertEquals("IX", $decimalNumber->convertirNumerosRomanos(9));
+    }
+
 
 
     /**
