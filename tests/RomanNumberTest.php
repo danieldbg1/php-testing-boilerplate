@@ -26,9 +26,18 @@ class RomanNumberTest extends TestCase{
         $this->assertEquals("D", $decimalNumber->convertirNumerosRomanos(500));
         $this->assertEquals("CM", $decimalNumber->convertirNumerosRomanos(900));
         $this->assertEquals("M", $decimalNumber->convertirNumerosRomanos(1000));
-
     }
 
+    /**
+     * @test
+     */
+    public function casos_suma(){
+        $decimalNumber = new RomanNumber();
+
+        $this->assertEquals("III", $decimalNumber->convertirNumerosRomanos(3));
+        $this->assertEquals("VIII", $decimalNumber->convertirNumerosRomanos(8));
+        $this->assertEquals("XXIII", $decimalNumber->convertirNumerosRomanos(23));
+    }
 
     /**
      * @test
