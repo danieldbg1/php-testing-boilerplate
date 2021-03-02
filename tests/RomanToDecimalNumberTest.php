@@ -2,16 +2,16 @@
 
 namespace Deg540\PHPTestingBoilerplate\Test;
 
-use Deg540\PHPTestingBoilerplate\RomanNumber;
+use Deg540\PHPTestingBoilerplate\RomanToDecimalNumber;
 use PHPUnit\Framework\TestCase;
 
-class RomanNumberTest extends TestCase{
+class RomanToDecimalNumberTest extends TestCase{
 
     /**
      * @test
      */
     public function casos_base(){
-        $decimalNumber = new RomanNumber();
+        $decimalNumber = new RomanToDecimalNumber();
 
         $this->assertEquals("I", $decimalNumber->convertirNumerosRomanos(1));
         $this->assertEquals("IV", $decimalNumber->convertirNumerosRomanos(4));
@@ -32,7 +32,7 @@ class RomanNumberTest extends TestCase{
      * @test
      */
     public function casos_suma(){
-        $decimalNumber = new RomanNumber();
+        $decimalNumber = new RomanToDecimalNumber();
 
         $this->assertEquals("III", $decimalNumber->convertirNumerosRomanos(3));
         $this->assertEquals("VIII", $decimalNumber->convertirNumerosRomanos(8));
@@ -43,7 +43,7 @@ class RomanNumberTest extends TestCase{
      * @test
      */
     public function casos_resta(){
-        $decimalNumber = new RomanNumber();
+        $decimalNumber = new RomanToDecimalNumber();
 
         $this->assertEquals("IV", $decimalNumber->convertirNumerosRomanos(4));
         $this->assertEquals("IX", $decimalNumber->convertirNumerosRomanos(9));
@@ -54,7 +54,7 @@ class RomanNumberTest extends TestCase{
      * @test
      */
     public function devuelve_numero_descompuesto_en_romano(){
-        $decimalNumber = new RomanNumber();
+        $decimalNumber = new RomanToDecimalNumber();
 
         $this->assertEquals("VIII", $decimalNumber->convertirNumerosRomanos(8));
         $this->assertEquals("IV", $decimalNumber->convertirNumerosRomanos(4));
