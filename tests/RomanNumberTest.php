@@ -42,6 +42,17 @@ class RomanNumberTest extends TestCase{
     /**
      * @test
      */
+    public function casos_resta(){
+        $decimalNumber = new RomanNumber();
+
+        $this->assertEquals("IV", $decimalNumber->convertirNumerosRomanos(4));
+        $this->assertEquals("IX", $decimalNumber->convertirNumerosRomanos(9));
+        $this->assertEquals("XCIX", $decimalNumber->convertirNumerosRomanos(99));
+    }
+
+    /**
+     * @test
+     */
     public function devuelve_numero_descompuesto_en_romano(){
         $decimalNumber = new RomanNumber();
 
